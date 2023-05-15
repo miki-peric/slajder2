@@ -64,7 +64,6 @@ header {
   position: relative;
   width: 100%;
   height: 100%;
-  /* background-color: green; */
   overflow: scroll;
   cursor: grab;
 }
@@ -74,9 +73,7 @@ header {
   left: 0px;
   width: 3500px;
   height: 100%;
-  /* background-color: pink; */
   display: flex;
-  /* overflow: hidden; */
 }
 
 .b-slide {
@@ -86,15 +83,8 @@ header {
   border: 1px solid black;
 }
 
-@media only screen and (max-width: 767px) {
-  /* sam ko djani 300*/
-  /* ovde mozda u JSu sredit to tipa marginLeft i marginRight window.width - 300 / 2  */
-  /* MORA I FULL sirina da se menja x10 */
-}
-
 @media only screen and (min-width: 768px) {
-/* ovde da idu 2 300 + 42*/
-/* ovde mozda u JSu sredit to tipa marginLeft i marginRight window.width - 300 / 2  */
+
   .b-slide {
     margin: 0 42px;
   }
@@ -105,7 +95,6 @@ header {
 }
 
 @media only screen and (min-width: 1024px) {
-/* ovde da idu 3 300 + 20.6*/
   .b-slide {
     margin: 0 20.6px;
   }
@@ -122,7 +111,7 @@ header {
 }
 
 @media only screen and (min-width: 1280px) {
-/* ovde moze 4 300 + 10*/
+
   .b-slide {
     margin: 0 10px;
   }
@@ -177,7 +166,6 @@ header {
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  /* border: 2px solid blue; */
 }
 
 .basicSlider-LeftBtn {
@@ -186,4 +174,19 @@ header {
 
 .basicSlider-RightBtn {
   background-image: url(SLIKE/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg);
+}
+
+.basicSlider.carouselEffect {
+  height: 300px;
+}
+
+.basicSlider.carouselEffect .b-slide a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  /* background-image: url(SLIKE/arrow_back_ios_new_FILL0_wght400_GRAD0_opsz48.svg); */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
