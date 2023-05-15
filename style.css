@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --background-color: #FFFFFF; */
+  --sliderRed: #c7363d;
+  --navigationRed: rgba(199, 54, 61, 0.1);
+  --navigationSilver: #CCCCCC;
+  --simpleCardsBlue: #0C71C3;
+}
+/* ======================================  */
+main {
+  background-color: burlywood;
+}
+
+header {
+  min-height: 200px;
+  width: 100%;
+  background-color: darkgrey;
+}
+
+
+/* ---------------------------- OSNOVE RESPONSIVE --------------------------------  */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 1000px;
+  background-color: white;
+  padding-top: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+      width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+      width: 1024px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+      width: 1280px;
+  }
+}
+
+
+/* ====================================================================================================================== */
+
+.basicSlider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.basicSliderFrame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background-color: green; */
+  overflow: scroll;
+  cursor: grab;
+}
+
+.basicSliderFull {
+  position: absolute;
+  left: 0px;
+  width: 3500px;
+  height: 100%;
+  /* background-color: pink; */
+  display: flex;
+  /* overflow: hidden; */
+}
+
+.b-slide {
+  position: relative;
+  height: 100%;
+  width: 300px;
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 767px) {
+  /* sam ko djani 300*/
+  /* ovde mozda u JSu sredit to tipa marginLeft i marginRight window.width - 300 / 2  */
+  /* MORA I FULL sirina da se menja x10 */
+}
+
+@media only screen and (min-width: 768px) {
+/* ovde da idu 2 300 + 42*/
+/* ovde mozda u JSu sredit to tipa marginLeft i marginRight window.width - 300 / 2  */
+  .b-slide {
+    margin: 0 42px;
+  }
+
+  .basicSliderFull {
+    width: 3840px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+/* ovde da idu 3 300 + 20.6*/
+  .b-slide {
+    margin: 0 20.6px;
+  }
+
+  .basicSliderFull {
+    width: 3412px;
+  }
+
+  .basicSlider-LeftBtn:hover,
+  .basicSlider-RightBtn:hover {
+      background-color: rgba(128, 128, 128, 0.473);
+      cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+/* ovde moze 4 300 + 10*/
+  .b-slide {
+    margin: 0 10px;
+  }
+
+  .basicSliderFull {
+    width: 3200px;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.basicSliderFrame::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.basicSliderFrame {
+   -ms-overflow-style: none; /* IE and Edge */
+   scrollbar-width: none; /*Firefox */
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  border: 1px solid var(--simpleCardsBlue);
+  border-radius: 10px;
+}
+
+.prog-bar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--simpleCardsBlue);
+}
+
+.basicSlider-Buttons {
+  position: absolute;
+  width: 108px;
+  height: 54px;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
+}
+
+.basicSlider-LeftBtn,
+.basicSlider-RightBtn {
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* border: 2px solid blue; */
+}
+
+.basicSlider-LeftBtn {
+  background-image: url(SLIKE/arrow_back_ios_new_FILL0_wght400_GRAD0_opsz48.svg);
+}
+
+.basicSlider-RightBtn {
+  background-image: url(SLIKE/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg);
+}
