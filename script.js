@@ -27,7 +27,7 @@ basicSliderArr.forEach(slider => {
         step = bSlideArr[0].offsetWidth + parseFloat(computedStyle.marginLeft) + parseFloat(computedStyle.marginRight);   
     }
 
-    for(let i = 1; i < 9; i++) {
+    for(let i = 1; i < 10; i++) {
         positions.push(positions[i - 1] + step);
     }
     console.log(positions);
